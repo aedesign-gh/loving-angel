@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='{{site.data.settings.lang}}'>
+<head>
+   <meta charset='utf-8'>
+   <title>{{site.data.settings.title}} · {{site.data.settings.theme}} by {{site.data.settings.author}}</title>
+   <meta name='description' content='{{site.data.settings.theme}} · {{site.data.settings.description}}'>
+   <meta name='keywords' content='{{site.data.settings.keywords}}'>
+   <meta name='author' content='{{site.data.settings.author}}'>
+   <meta name='dcterms.rightsHolder' content='{{site.url}}{{site.baseurl}}'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel='canonical' href='{{site.url | replace:"index.html", ""}}{{site.baseurl}}'>
+   <link rel='stylesheet' href='{{site.baseurl}}/assets/css/main.css' type='text/css'>
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Khand:300,400'>
+   <link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico'>   
+</head>
+<body>
+<header id='header'>
+   
+   <section class='top'>
+      <div class='container'>
+         <div class='top-flex'>
+            <div class='social'>
+               {% for fb in site.data.settings.social %}
+               {% if fb.name == 'facebook' %}
+               <a class='social-item' href='{{fb.link}}' target='_blank'>
+                  {% include icons/fb.html %}
+               </a>
+               {% endif %}
+               {% endfor %}
+               <a class='social-item' href='{{site.url}}{{site.baseurl}}'>
+                  {% include icons/insta.html %}
+               </a>
+               <a class='social-item' href='{{site.url}}{{site.baseurl}}'>
+                  {% include icons/twit.html %}
+               </a>
+            </div>
+            <h4 class='email'>email us now: <a href='mailto:{{site.data.settings.email}}'>{{site.data.settings.email}}</a></h4>         
+            <h4 class='mobile'>call us now: <a href='tel:{{site.data.settings.phone}}'>{{site.data.settings.phone}}</a></h4>
+         </div>  
+      </div>   
+   </section> 
+
+   <nav class='bottom'>
+      <div class='container'>
+         <div class='bottom-flex'>
+            <a class='banner' href='{{site.url}}{{site.baseurl}}'>
+               {% include icons/logo.html %}               
+            </a>
+
+            <div class='nav-menu-flex'>
+               <a class='nav-item home' href='{{site.url}}{{site.baseurl}}'>home</a>
+               <a class='nav-item' href='{{site.url}}{{site.baseurl}}'>service</a>
+               <a class='nav-item' href='{{site.url}}{{site.baseurl}}'>support</a>
+               <a class='nav-item' href='{{site.url}}{{site.baseurl}}'>love nature</a>
+            </div>
+         </div>
+      </div>
+   </nav>  
+   
+</header>
